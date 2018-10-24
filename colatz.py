@@ -1,4 +1,5 @@
 def colatz(number):
+    
     if number %2 == 0:
         print(number // 2)
         return number // 2
@@ -9,3 +10,10 @@ def colatz(number):
 n = input("Give me a number: ")
 while n != 1:
     n = colatz(int(n))
+    
+def isstr(n):
+    try:
+        colatz(str(n))
+    except ValueError:
+        print('Please type integer value')
+       
